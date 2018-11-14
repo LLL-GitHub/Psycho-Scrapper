@@ -273,6 +273,7 @@
     {
       "js": ["mturk/workspace-expander.js"],
       "matches": ["https://worker.mturk.com/projects/*/tasks/*"],
+      "matches": ["https://worker.mturk.com/projects/*"],
       "run_at": "document_end"
     }
   ]
