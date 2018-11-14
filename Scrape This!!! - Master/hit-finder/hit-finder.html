@@ -1,0 +1,1551 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Scrape This!!!</title>
+
+    <link href="/hit-finder/hit-finder.css" rel="stylesheet">
+    <link href="/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="/bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/nested-modals.js"></script>
+
+    <script src="/js/fetch-with-timeout.js"></script>
+    <script src="/js/storage.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/text-to-speech.js"></script>
+</head>
+
+<body>
+<!-- -------------------------------------------------------------------------------------- AP and Toggles Modal ---------------------------------------------------------------------------- -->
+
+        <div id="hideIt">
+                <a class="btn btn-sm">💢</a>
+            <div><!--div that we want to hide-->
+                    <p>This is the heart of the scrapper.</p>
+                    <button type="button" class="btn btn-sm btn-primary ml-1" id="test"> Test Button </button>
+
+            </div><!--end div_text_container-->
+          
+                <div class="column-b" style="background-color:#bbb;">
+                        <h4>Toggles A-B</h4>
+                        <div class="btn-group-toggle" data-toggle="buttons">Fritz&H.
+                            <label class="btn btn-sm btn-warning">
+                                  <input name="my-input-value" type="checkbox" value="0" />
+                                  <span class="slider round"></span>
+                                  <span class="absolute-no">OFF</span>
+                            </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">Zoltar
+                            <label class="btn btn-sm btn-warning">
+                                  <input name="my-input-value" type="checkbox" value="0" />OFF
+                            </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">Test
+                            <label class="btn btn-sm btn-primary">
+                                  <input name="my-input-value" type="checkbox" value="0" />ON
+                            </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">Barcodes
+                            <label class="btn btn-sm btn-warning">
+                                  <input name="my-input-value" type="checkbox" value="0" />OFF
+                            </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">Searcher
+                            <label class="btn btn-sm btn-warning">
+                                  <input name="my-input-value" type="checkbox" value="0" />OFF
+                            </label>
+                        </div>
+
+                </div>
+                        
+                <div class="column-c" style="background-color:#bbb;">
+                        <h4>Scripts</h4>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-sm btn-warning">
+                                <input name="my-input-value" type="checkbox" value="0" />
+                                        <span class="slider round"></span>
+                                        <span class="absolute-no">Fritz</span>
+                            </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-sm btn-warning">
+                                  <input name="my-input-value" type="checkbox" value="0" />Sergey
+                            </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-sm btn-primary">
+                                    <input name="my-input-value" type="checkbox" value="0" />C-Sats
+                            </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-sm btn-warning">
+                                    <input name="my-input-value" type="checkbox" value="0" />Emily
+                                </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-sm btn-warning">
+                                     <input name="my-input-value" type="checkbox" value="0" />OCMP5
+                                </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-sm btn-warning">
+                                    <input name="my-input-value" type="checkbox" value="0" />Remesh
+                                </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-sm btn-primary">
+                                    <input name="my-input-value" type="checkbox" value="0" />BotBot
+                                </label>
+                        </div>
+                </div>
+
+                <div class="column">
+                        <h4>AP (TBA) Checkboxes</h4>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-sm btn-primary btn-outline-secondary">
+                                    <input name="my-input-value" type="checkbox" value="0" />Fritz&H.
+                                </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-sm btn-outline-secondary">
+                                    <input name="my-input-value" type="checkbox" value="0" />Zoltar
+                                </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                                  <label class="btn btn-sm btn-outline-secondary">
+                                    <input name="my-input-value" type="checkbox" value="0" />Test
+                                  </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                                      <label class="btn btn-sm btn-outline-secondary">
+                                        <input name="my-input-value" type="checkbox" value="0" />Barcodes
+                                      </label>
+                        </div>
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                                          <label class="btn btn-sm btn-outline-secondary">
+                                            <input name="my-input-value" type="checkbox" value="0" />Searcher
+                                          </label>
+                        </div> 
+                              <p>More...</p>
+                </div>
+
+                <div class="column">
+                        <h4 class="scriptToggle">AP (TBA) Toggles</h4>
+                        <div class="btn-group-toggle" data-toggle="buttons">Fritz&H.
+                                <label class="btn btn-sm btn-primary">
+                                    <input name="my-input-value" type="checkbox" value="0" />
+                                         <span class="slider round"></span>
+                                         <span class="absolute-no">ON</span>
+                                </label>
+                        </div>
+                <div class="btn-group-toggle" data-toggle="buttons">Zoltar
+                    <label class="btn btn-sm btn-warning">
+                        <input name="my-input-value" type="checkbox" value="0" />OFF
+                    </label>
+                </div>
+
+                <div class="btn-group-toggle" data-toggle="buttons">Test
+                    <label class="btn btn-sm btn-primary">
+                        <input name="my-input-value" type="checkbox" value="0" />ON
+                    </label>
+                </div>
+
+                <div class="btn-group-toggle" data-toggle="buttons">Barcodes
+                    <label class="btn btn-sm btn-warning">
+                        <input name="my-input-value" type="checkbox" value="0" />OFF
+                    </label>
+                </div>
+
+                <div class="btn-group-toggle" data-toggle="buttons">Searcher
+                    <label class="btn btn-sm btn-warning">
+                        <input name="my-input-value" type="checkbox" value="0" />OFF
+                    </label>
+                </div>
+
+                <p>More...</p>
+
+            </div>
+        </div> 
+     </div> 
+</div>
+
+<!-- ---------------------------------------------------------------------------------------- Navbar ----------------------------------------------------------------------------------------- -->
+
+<div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h4 class="text-white" >💢<i>Scrape This!!!</i></h4>
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                            <a class ="w-25" href="#" data-toggle="modal" data-target="#settings-modal">🛠️ Settings</a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">📇<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#" data-toggle="modal" data-target="#include-list-modal">Include 📇</a></li>
+                                  <li><a href="#" data-toggle="modal" data-target="#block-list-modal">🚧 List</a></li>
+                                </ul>
+                    </li>
+                    <li class="nav-item">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">🐼<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-toggle="modal" data-target="#autoPandaInclude-list-modal">🐼 AutoPanda List</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#block-list-modal">🐼 🚧 List</a></li>
+                                </ul>
+                    </li>
+                  </ul>
+                  <br>
+
+<!- ------------------------------------------------------------------------------ TTS Volume Slider ----------------------------------------------------------------------------------------  ->
+
+            <div class="d-flex justify-content-space-evenly mr-4"></div>
+                    <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Volume level for TTS">TTS Volume</label>
+                    <div class="range-field">
+                            <span class="font-weight-bold indigo-text mx-2">0</span>
+                            <input id="tts-volume" type="range" min="0" max="1" step=".1"></input>
+                       <span class="font-weight-bold indigo-text mx-2">100</span>
+
+                </div>
+          </div>
+        </div>
+        <nav class="navbar sticky-top navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span>💢</span>
+          </button>
+        </nav>
+      </div>
+
+<!-- ---------------------------------------------------------------------------------- End of Navbar ---------------------------------------------------------------------------------------- -->
+
+<br>
+<!-- ----------------------------------------------------------------------------- This is the Start button row. ---------------------------------------------------------------------------- -->
+
+        <div class="mb-1"></div>
+        <div class="input-group input-group-sm mb-3">
+            <button type="button" id="find" class="btn btn-sm btn-outline-success mr-1">START</button>
+
+            <div class="input-group-addon">
+                <span class="input-group-text">Speed</span>
+            </div>
+            <input type="number" id="speed" class="text-center" step="100" min="0" style="width: 75px;">
+            <div class="input-group-addon">
+                <span class="input-group-text">ms</span>
+                
+        </div> 
+        
+</div> 
+
+
+<!-- ----------------------------------------------------------------------------------------Include List Hits Card ------------------------------------------------------------------------- -->
+
+    <div id="include-list-hits-card" class="card mb-1" style="display: none;">
+        <div class="card-header p-1">
+            <button type="button" id="include-hits-clear" class="btn btn-sm btn-danger">
+                <i class="fa fa-minus-circle"></i>
+            </button>
+            Include List HITs
+        </div>
+
+        <div class="card-block">
+            <table class="table table-hover table-striped table-extra-condensed">
+                <thead id="include-list-hits-thead">
+                    <th class="w-1"></th>
+                    <th class="w-1">Time</th>
+                    <th>Requester</th>
+                    <th>Title</th>
+               <!--     <th class="text-center w-1">P</th>
+                    <th class="text-center">O</th> -->
+                    <th class="text-center w-1">HITs</th>
+                    <th class="text-center">Accept</th>
+                    <th class="text-center w-1">M</th>
+                </thead>
+                <tbody id="include-list-hits-tbody"></tbody>
+            </table>
+        </div>
+    </div>
+      
+<!-- ------------------------------------------------------------------------- autoPanda Logged Hits Card (modal) ------------------------------------------------------------------------------ -->
+<br>
+
+<div id="autoPandaLogged-hits-card" class="card mb-1">
+    <div class="card-header p-1">
+        <button type="button" id="autoPandaLogged-hits-toggle" class="btn btn-sm btn-primary">
+            <i class="fa fa-caret-up"></i>
+        </button>
+        AP Logged HITs
+        <small id="updated"></small>
+        <span class="float-right small">
+            AP HITs Logged:
+            <span id="autoPanda-hits-logged">0</span>
+        </span>
+        
+    </div>
+
+    <div class="card-block">
+        <table class="table table-hover table-striped table-extra-condensed">
+            <thead id="autoPandaLogged-hits-thead">
+                
+        <br>
+        <div style="border-bottom: 3px solid; margin-bottom: 5px;">
+            <span style="font-size: 20px; font-weight: bold; color: white;"></span>
+            <span style="font-size: 15px; font-weight: bold;">
+                <input type="checkbox" id="APO-1" title="Auto Panda Once if > 1" style="vertical-align: middle; margin-left: 50px;">[$1 or more]
+                <input type="checkbox" id="APO-3" title="Auto Panda Once if > 3" style="vertical-align: middle; margin-left: 50px;">[$3 or more]
+                <input type="checkbox" id="APO-5" title="Auto Panda Once if > 5" style="vertical-align: middle; margin-left: 50px;">[$5 or more]
+                <input type="checkbox" id="APO-10" title="Auto Panda Once if > 10" style="vertical-align: middle; margin-left: 50px;">[$10 or more]
+                <input type="checkbox" id="APO-DI" title="Censor beep played for non-qualled hits." style="vertical-align: middle; margin-left: 50px;">[Damn It]
+                <input type="checkbox" id="APO-A" title="Auto Panda Once if > A" style="vertical-align: middle; margin-left: 50px;">[A]
+                <input type="checkbox" id="APO-B" title="Auto Panda Once if > B" style="vertical-align: middle; margin-left: 50px;">[B]
+                <input type="checkbox" id="APO-C" title="Auto Panda Once if > C" style="vertical-align: middle; margin-left: 50px;">[C]
+                <input type="checkbox" id="APO-D" title="Auto Panda Once if > D" style="vertical-align: middle; margin-left: 50px;">[D]
+                <input type="checkbox" id="APO-E" title="Auto Panda Once if > E" style="vertical-align: middle; margin-left: 50px;">[E]
+            </span>
+            <span id="autoPandaLogged_hits_data" style="font-size: 11px;"></span>
+            </div>
+        
+                <th class="w-1"></th>
+                <th class="w-1">Time</th>
+                <th>Requester</th>
+                <th>Title</th>
+                 <!--  <th class="text-center w-1">P</th>
+                <th class="text-center">O</th>-->
+                <th class="text-center w-1">HITs</th>
+                <th class="text-center">Accept</th>
+                <th class="text-center w-1">M</th>
+            </thead>
+            <tbody id="autoPandaLogged-hits-tbody"></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ----------------------------------------------------------------------------------------Recent Hits Card ----------------------------------------------------------------------------------->
+<br>
+
+<div id="recent-hits-card" class="card mb-1">
+        <div class="card-header p-1">
+            <button type="button" id="recent-hits-toggle" class="btn btn-sm btn-primary">
+                <i class="fa fa-caret-up"></i>
+            </button>
+            Recent HITs
+            <medium id="hits-found"></medium>
+            <span class="float-right">
+                Total Scans:
+                <span id="total-scans">0</span> | PRE:
+                <span id="page-request-errors">0</span>
+            </span>
+        </div>
+<br>
+        <div class="card-block">
+            <table class="table table-hover table-striped table-extra-condensed">
+                <thead id="recent-hits-thead">
+                    <th class="w-1"></th>
+                    <th class="w-1">Time</th>
+                    <th>Requester</th>
+                    <th>Title</th>
+                  <!--  <th class="text-center w-1">P</th>
+                    <th class="text-center">O</th>-->
+                    <th class="text-center w-1">HITs</th>
+                    <th class="text-center">Accept</th>
+                    <th class="text-center w-1">M</th>
+                </thead>
+                <tbody id="recent-hits-tbody"></tbody>
+            </table>
+        </div>
+    </div>
+<br>
+<!-- -------------------------------------------------------------------------------- Logged Hits Card (modal) ------------------------------------------------------------------------------ -->
+
+    <div id="logged-hits-card" class="card mb-1">
+        <div class="card-header p-1">
+            <button type="button" id="logged-hits-toggle" class="btn btn-sm btn-primary">
+                <i class="fa fa-caret-up"></i>
+            </button>
+            Logged HITs
+            <small id="updated"></small>
+            <span class="float-right">
+                HITs Logged:
+                <span id="hits-logged">0</span>
+            </span>
+        </div>
+       <br>
+        <div class="card-block">
+            <table class="table table-hover table-striped table-extra-condensed">
+                <thead id="logged-hits-thead">
+                    <th class="w-1"></th>
+                    <th class="w-1">Time</th>
+                    <th>Requester</th>
+                    <th>Title</th>
+                     <!--  <th class="text-center w-1">P</th>
+                    <th class="text-center">O</th>-->
+                    <th class="text-center w-1">HITs</th>
+                    <th class="text-center">Accept</th>
+                    <th class="text-center w-1">M</th>
+                </thead>
+                <tbody id="logged-hits-tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- -------------------------------------------------------------------------------- Block List Modal ------------------------------------------------------------------------------- -->
+
+    <div id="block-list-modal" class="modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Block List</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="block-list-delete" class="btn btn-danger mr-auto">Delete All</button>
+                    <label class="btn btn-secondary mb-0">
+                        Import
+                        <input type="file" id="block-list-import" style="display: none;"></input>
+                    </label>
+                    <button type="button" id="block-list-export" class="btn btn-secondary">Export</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#block-list-add-modal">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------------------------------------------------------------------------------- Block List Add Modal ---------------------------------------------------------------------------------- -->
+
+    <div id="block-list-add-modal" class="modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add To Block List</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="small mb-0" style="cursor: help;" data-toggle="tooltip" title="Nickname for the match term">Name</label>
+                        <input type="text" id="block-list-add-name" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="small mb-0" style="cursor: help;" data-toggle="tooltip" title="Term used to match a requester id, requester name, group id or hit title">Match</label>
+                        <input type="text" id="block-list-add-match" class="form-control">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Requires matches to be 100% identical to the requester id, requester name, group id or hit title">
+                                <input type="checkbox" id="block-list-add-strict" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Strict Matching</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="block-list-add-save" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------------------------------------------------------------------------------- Block List Edit Modal --------------------------------------------------------------------------------- -->
+
+    <div id="block-list-edit-modal" class="modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Block List Item</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="small mb-0">Name</label>
+                        <input type="text" id="block-list-edit-name" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="small mb-0">Match</label>
+                        <input type="text" id="block-list-edit-match" class="form-control" disabled>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <label class="custom-control custom-checkbox" data-toggle="tooltip" style="cursor: help;" title="Requires matches to be exact">
+                                <input type="checkbox" id="block-list-edit-strict" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Strict Matching</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="block-list-edit-delete" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                    <button type="button" id="block-list-edit-save" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ------------------------------------------------------------------------------- Include List Modal ------------------------------------------------------------------------------------- -->
+    <div id="include-list-modal" class="modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Include List</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="include-list-delete" class="btn btn-danger mr-auto">Delete All</button>
+                    <label class="btn btn-secondary mb-0">
+                        Import
+                        <input type="file" id="include-list-import" style="display: none;"></input>
+                    </label>
+                    <button type="button" id="include-list-export" class="btn btn-secondary">Export</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#include-list-add-modal" data-id-include-list-add-strict="true"
+                        data-id-include-list-add-sound="true" data-id-include-list-add-notification="true">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------------------------------------------------------------------------------- Include List Add Modal -------------------------------------------------------------------------------- -->
+
+    <div id="include-list-add-modal" class="modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add To Include List</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="small mb-0" style="cursor: help;" data-toggle="tooltip" title="Nickname for the match term">Name</label>
+                        <input type="text" id="include-list-add-name" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="small mb-0" style="cursor: help;" data-toggle="tooltip" title="Term used to match a requester id, requester name, group id or hit title">Match</label>
+                        <input type="text" id="include-list-add-match" class="form-control">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Requires matches to be 100% identical to the requester id, requester name, group id or hit title">
+                                <input type="checkbox" id="include-list-add-strict" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Strict Matching</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Plays the sound selected under options if matched">
+                                <input type="checkbox" id="include-list-add-sound" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Sound</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Plays an annoyingly loud alarm if matched and the alarm is enabled">
+                                <input type="checkbox" id="include-list-add-alarm" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Alarm</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Shows a desktop notification that you can preview or accept the HIT from if matched">
+                                <input type="checkbox" id="include-list-add-notification" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Notification</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Sends you a Pushbullet message if matched and enabled under options">
+                                <input type="checkbox" id="include-list-add-pushbullet" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Pushbullet</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="include-list-add-save" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------------------------------------------------------------------------------- Include List Edit Modal ------------------------------------------------------------------------------- -->
+
+    <div id="include-list-edit-modal" class="modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Include List Item</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="small mb-0" style="cursor: help;" data-toggle="tooltip" title="Nickname for the match term">Name</label>
+                        <input type="text" id="include-list-edit-name" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="small mb-0" style="cursor: help;" data-toggle="tooltip" title="Term used to match a requester id, requester name, group id or hit title">Match</label>
+                        <input type="text" id="include-list-edit-match" class="form-control">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Requires matches to be 100% identical to the requester id, requester name, group id or hit title">
+                                <input type="checkbox" id="include-list-edit-strict" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Strict Matching</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Plays the sound selected under options if matched">
+                                <input type="checkbox" id="include-list-edit-sound" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Sound</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Plays an annoyingly loud alarm if matched and the alarm is enabled">
+                                <input type="checkbox" id="include-list-edit-alarm" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Alarm</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Shows a desktop notification that you can preview or accept the HIT from if matched">
+                                <input type="checkbox" id="include-list-edit-notification" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Notification</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Sends you a Pushbullet message if matched and enabled under options">
+                                <input type="checkbox" id="include-list-edit-pushbullet" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Pushbullet</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="include-list-edit-delete" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                    <button type="button" id="include-list-edit-save" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ----------------------------------------------------------------------------------- AutoPanda Include List Modal ------------------------------------------------------------------------------- -->
+
+    <div id="autoPandaInclude-list-modal" class="modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">AP Include List</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="autoPandaInclude-list-delete" class="btn btn-danger mr-auto">Delete All</button>
+                    <label class="btn btn-secondary mb-0">
+                        Import
+                        <input type="file" id="autoPandaInclude-list-import" style="display: none;"></input>
+                    </label>
+                    <button type="button" id="autoPandaInclude-list-export" class="btn btn-secondary">Export</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#autoPandaInclude-list-add-modal" data-id-autoPandaInclude-list-add-strict="true"
+                        data-id-autoPandaInclude-list-add-sound="true" data-id-autoPandaInclude-list-add-notification="true">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------------------------------------------------------------------------------- AutoPanda List Add Modal ------------------------------------------------------------------------------ -->
+
+    <div id="autoPandaInclude-list-add-modal" class="modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add To AutoPanda Include List</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="small mb-0" style="cursor: help;" data-toggle="tooltip" title="Nickname for the match term">Name</label>
+                        <input type="text" id="autoPandaInclude-list-add-name" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="small mb-0" style="cursor: help;" data-toggle="tooltip" title="Term used to match a requester id, requester name, group id or hit title">Match</label>
+                        <input type="text" id="autoPandaInclude-list-add-match" class="form-control">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Requires matches to be 100% identical to the requester id, requester name, group id or hit title">
+                                <input type="checkbox" id="autoPandaInclude-list-add-strict" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Strict Matching</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Plays the sound selected under options if matched">
+                                <input type="checkbox" id="autoPandaInclude-list-add-sound" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Sound</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Plays an annoyingly loud alarm if matched and the alarm is enabled">
+                                <input type="checkbox" id="autoPandaInclude-list-add-alarm" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Alarm</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Shows a desktop notification that you can preview or accept the HIT from if matched">
+                                <input type="checkbox" id="autoPandaInclude-list-add-notification" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Notification</span>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="autoPandaInclude-list-add-save" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------------------------------------------------------------------------------- AutoPanda List Edit Modal ----------------------------------------------------------------------------- -->
+
+    <div id="autoPandaInclude-list-edit-modal" class="modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Include List Item</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="small mb-0" style="cursor: help;" data-toggle="tooltip" title="Nickname for the match term">Name</label>
+                        <input type="text" id="autoPandaInclude-list-edit-name" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="small mb-0" style="cursor: help;" data-toggle="tooltip" title="Term used to match a requester id, requester name, group id or hit title">Match</label>
+                        <input type="text" id="autoPandaInclude-list-edit-match" class="form-control">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Requires matches to be 100% identical to the requester id, requester name, group id or hit title">
+                                <input type="checkbox" id="autoPandaInclude-list-edit-strict" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Strict Matching</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Plays the sound selected under options if matched">
+                                <input type="checkbox" id="autoPandaInclude-list-edit-sound" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Sound</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Plays an annoyingly loud alarm if matched and the alarm is enabled">
+                                <input type="checkbox" id="autoPandaInclude-list-edit-alarm" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Alarm</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Shows a desktop notification that you can preview or accept the HIT from if matched">
+                                <input type="checkbox" id="autoPandaInclude-list-edit-notification" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Notification</span>
+                            </label>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="custom-control custom-checkbox" style="cursor: help;" data-toggle="tooltip" title="Sends you a Pushbullet message if matched and enabled under options">
+                                <input type="checkbox" id="autoPandaInclude-list-edit-pushbullet" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Pushbullet</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="autoPandaInclude-list-edit-delete" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                    <button type="button" id="autoPandaInclude-list-edit-save" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of autopanda modal-->
+
+<!-- -------------------------------------------------------------------------------- Hit Info Modal --------(Added OW link)----------------------------------------------------------------- -->
+
+    <!-- HIT Info Modal-->
+    <div id="hit-info-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">HIT Information</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Title
+                                </td>
+                                <td id="hit-info-title"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="btn-group">
+
+                                    </div>
+                                    Requester
+                                </td>
+                                <td id="hit-info-requester"></td>
+                            </tr>
+                            <tr>
+                                <td>Reward</td>
+                                <td id="hit-info-reward"></td>
+                            </tr>
+                            <tr>
+                                <td>Duration</td>
+                                <td id="hit-info-duration"></td>
+                            </tr>
+                            <tr>
+                                <td>Available</td>
+                                <td id="hit-info-available"></td>
+                            </tr>
+                            <tr>
+                                <td>Description</td>
+                                <td id="hit-info-description"></td>
+                            </tr>
+                            <tr>
+                                <td>Requirements</td>
+                                <td id="hit-info-requirements"></td>
+                            </tr>
+                            <tr>
+                                <td> Qualifications</td>
+                                <td id="hit-info-qualifications"></td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>Take Test</td>
+                                <td id="hit-info-tests"></td>
+                            </tr>
+                            <tr>
+                                <td>OW</td>
+                                <td id="hit-info-ow"></td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+
+                    <div class="container">
+                        <div class="row">
+                            <button type="button" id="hit-info-autoPandaInclude-hit" class="btn btn-sm btn-primary col m-1" data-toggle="modal" data-target="#autoPandaInclude-list-add-modal">AP Hit</button>
+                            <button type="button" id="hit-info-autoPandaInclude-requester" class="btn btn-sm btn-primary col m-1" data-toggle="modal" data-target="#autoPandaInclude-list-add-modal">AP Req</button>
+                            <button type="button" id="hit-info-block-hit" class="btn btn-sm btn-danger col m-1" data-toggle="modal" data-target="#block-list-add-modal">Block HIT</button>
+                            <button type="button" id="hit-info-block-requester" class="btn btn-sm btn-danger col m-1" data-toggle="modal" data-target="#block-list-add-modal">Block Req</button>
+                            <button type="button" id="hit-info-include-hit" class="btn btn-sm btn-success col m-1" data-toggle="modal" data-target="#include-list-add-modal">Include HIT</button>
+                            <button type="button" id="hit-info-include-requester" class="btn btn-sm btn-success col m-1" data-toggle="modal" data-target="#include-list-add-modal">Include Req</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------------------------------------------------------------------------------- Hit Sharer Modal --------------(Exporter)-------------------------------------------------------------------- -->
+
+    <div id="hit-sharer-modal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Share HIT</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 mb-2">
+                                <button class="btn btn-primary w-100 hit-sharer" id="hit-export-short">Short</button>
+                            </div>
+                            <div class="col-6 mb-2">
+                                <button class="btn btn-primary w-100 hit-sharer" id="hit-export-plain">Plain</button>
+                            </div>
+                            <div class="col-6 mb-2">
+                                <button class="btn btn-primary w-100 hit-sharer" id="hit-export-bbcode">BBCode</button>
+                            </div>
+                            <div class="col-6 mb-2">
+                                <button class="btn btn-primary w-100 hit-sharer" id="hit-export-markdown">Markdown</button>
+                            </div>
+                            <div class="col-6 mb-2">
+                                <button class="btn btn-primary w-100 hit-sharer" id="hit-export-turkerhub">Turker Hub</button>
+                            </div>
+                            <div class="col-6 mb-2">
+                                <button class="btn btn-primary w-100 hit-sharer" id="hit-export-mturkcrowd">Mturk Crowd</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------------------------------------------------------------------------------- Settings Modal ---------------------------------------------------------------------------------------- -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#settings-filter">Filter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#settings-alert">Alerts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#settings-display">Display</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-3">
+<!-- -------------------------------------------------------------------------------------- Filter Card -------------------------------------------------------------------------------------- -->
+
+                        <div class="tab-pane fade show active" id="settings-filter">
+                            <div class="container">
+                                <div class="row mb-2">
+                                    <div class="col-xs-12 col-lg-6">
+                                        <label class="small mb-0">Search Terms</label>
+                                        <input type="text" id="filter-search-term" class="form-control">
+                                    </div>
+                                    <div class="col-xs-12 col-lg-6">
+                                        <label class="small mb-0">Sort by</label>
+                                        <select id="filter-sort" class="custom-select w-100">
+                                            <option value="updated_asc">Creation date: oldest first</option>
+                                            <option value="updated_desc">Creation date: newest first</option>
+                                            <option value="reward_asc">Reward amount: lowest first</option>
+                                            <option value="reward_desc">Reward amount: highest first</option>
+                                            <option value="num_hits_asc">HITs: least first</option>
+                                            <option value="num_hits_desc">HITs: most first</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-xs-12 col-lg-6">
+                                        <label class="small mb-0">Page Size</label>
+                                        <input type="number" id="filter-page-size" class="form-control" step="1" min="1" max="100">
+                                    </div>
+                                    <div class="col-xs-12 col-lg-6">
+                                        <label class="small mb-0">Minimum HITs Available</label>
+                                        <input type="number" id="filter-min-available" class="form-control" step="1" min="0">
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-xs-12 col-lg-6">
+                                        <label class="small mb-0">Minimum Reward</label>
+                                        <input type="number" id="filter-min-reward" class="form-control" step=".01" min="0">
+                                    </div>
+                                    <div class="col-xs-12 col-lg-6">
+                                        <label class="small mb-0">Minimum Requester Rating</label>
+                                        <input type="number" id="filter-min-requester-rating" class="form-control" step=".1" min="0" max="5">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="small col-12">HITs</div>
+                                    <div class="col-xs-12 col-lg-6">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="filter-qualified" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">I'm qualified to work on</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-6">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="filter-qualified-two" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Qualled List</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-6">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="filter-masters" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Requiring Masters Qualification</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!-- -------------------------------------------------------------------------------------- Alerts Card -------------------------------------------------------------------------------------- -->
+                        <div class="tab-pane fade" id="settings-alert">
+                            <div class="container mt-1">
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Sound to play when a new HIT is found">
+                                            New HIT Sound
+                                        </label>
+                                        <select id="alert-new-sound" class="custom-select w-100">
+                                            <option value="none">None</option>
+                                            <option value="sound-1">Sound 1</option>
+                                            <option value="sound-2">Sound 2</option>
+                                            <option value="sound-3">Sound 3</option>
+                                            <option value="sound-4">Sound 4</option>
+                                            <option value="sound-5">Sound 5</option>
+                                            <option value="sound-6">Sound 6</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                            <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Volume level for Alerts">Alert Volume</label>
+                                            <div class="range-wrapper">
+                                                <input id="alert-volume" type="range" min="0" max="1" step=".1" />
+                                                <div class="label"><small class="align-left">0%</small> <small class="align-right">100%</small></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="How long in minutes before the include list with match a specific HIT">
+                                            Include Match Delay
+                                        </label>
+                                        <input id="alert-include-delay" type="number" class="form-control" step="1" min="1" value="60">
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Sound to play when an include list match is found">
+                                            Include Match Sound
+                                        </label>
+                                        <select id="alert-include-sound" class="custom-select w-100">
+                                            <option value="voice">Voice</option>
+                                            <option value="sound-1">Sound 1</option>
+                                            <option value="sound-2">Sound 2</option>
+                                            <option value="sound-3">Sound 3</option>
+                                            <option value="sound-4">Sound 4</option>
+                                            <option value="sound-5">Sound 5</option>
+                                            <option value="sound-6">Sound 6</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Send a message to pushbullet when an include list match is found">
+                                            Pushbullet State
+                                        </label>
+                                        <select id="alert-pushbullet-state" class="custom-select w-100">
+                                            <option value="on">On</option>
+                                            <option value="off" selected>Off</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Your pushbullet access token">
+                                            Pushbullet Token
+                                        </label>
+                                        <input id="alert-pushbullet-token" type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                            <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Toggle the alarm">
+                                               Alarm On/Off
+                                            </label>
+                                       <button id="alarm-on" class="btn btn-danger w-100">Alarm</button>
+                                    </div>
+                                    <div class="col-6">
+                                            <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Your pushbullet access token">
+                                                Select TTS Voice
+                                            </label>
+                                        <select id="voiceSelect" class="custom-select w-100"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!-- -------------------------------------------------------------------------------------- Display Card -------------------------------------------------------------------------------------- -->
+
+                        <div class="tab-pane fade" id="settings-display">
+                            <div class="container">
+                                <div class="row mb-3">
+                                    <div class="col-3">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="display-colored-rows" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Colored Rows</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Toggle the visibilty for columns in the Recent HITs table">
+                                            Recent HITs Columns
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline col-2">
+                                            <input type="checkbox" id="display-recent-column-time" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Time</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-recent-column-requester" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Requester</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-recent-column-title" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Title</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-recent-column-available" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Available</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-recent-column-reward" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Reward</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-recent-column-masters" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Masters</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Toggle the visibilty for columns in the Recent HITs table">
+                                            Logged HITs Columns
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline col-2">
+                                            <input type="checkbox" id="display-logged-column-time" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Time</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-logged-column-requester" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Requester</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-logged-column-title" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Title</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-logged-column-available" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Available</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-logged-column-reward" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Reward</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-logged-column-masters" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Masters</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+                                <div class="row mb-3">
+                                        <div class="col-12">
+                                            <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Toggle the visibilty for the AP Logged HITs table">
+                                                AP HITs Columns
+                                            </label>
+                                        </div>
+    
+                                        <div class="col">
+                                            <label class="custom-control custom-checkbox custom-control-inline col-2">
+                                                <input type="checkbox" id="display-autoPanda-column-time" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Time</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="col">
+                                            <label class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="display-autoPanda-column-requester" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Requester</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="col">
+                                            <label class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="display-autoPanda-column-title" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Title</span>
+                                            </label>
+                                        </div>
+                                        
+                                      <!--  <div class="col">
+                                            <label class="custom-control custom-checkbox custom-control-online">
+                                                <input type="button" id="display-recent-column-panda" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Panda</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="col">
+                                            <label class="custom-control custom-checkbox custom-control-online">
+                                                <input type="button" id="display-recent-column-once" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Once</span>
+                                            </label>
+                                        </div> -->
+    
+                                        <div class="col">
+                                            <label class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="display-autoPanda-column-available" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Available</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="col">
+                                            <label class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="display-autoPanda-column-reward" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Reward</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="col">
+                                            <label class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="display-autoPanda-column-masters" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Masters</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <label class="small mb-0" data-toggle="tooltip" style="cursor: help;" title="Toggle the visibilty for columns in the Logged HITs table">
+                                            Included HITs Columns
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline col-2">
+                                            <input type="checkbox" id="display-included-column-time" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Time</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-included-column-requester" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Requester</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-included-column-title" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Title</span>
+                                        </label>
+                                    </div>
+                                    
+                                  <!--  <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-online">
+                                            <input type="button" id="display-recent-column-panda" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Panda</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-online">
+                                            <input type="button" id="display-recent-column-once" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Once</span>
+                                        </label>
+                                    </div> -->
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-included-column-available" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Available</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-included-column-reward" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Reward</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="display-included-column-masters" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Masters</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- -------------------------------------------------------------------------------- Footer Modal ---------------------------------------------------------------------------------------- -->
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="settings-apply" class="btn btn-primary" data-dismiss="modal">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------------------------------------------------------------------- Requester Review Modal ------------------------------------------------------------------------------------------ -->
+
+    <div id="requester-review-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <b class="col-4">Reviews</b>
+                    <small id="review-who" class="col-8 text-muted overflow"></small>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row small text-nowrap">
+                            <div id="review-turkerview" class="col-3">
+                                <h5>
+                                    <a id="review-turkerview-link" class="text-primary font-weight-bold" target="_blank">Turkerview</a>
+                                </h5>
+                                <div id="review-turkerview-review">
+                                    <div class="row">
+                                        <div class="col">Hourly</div>
+                                        <div id="review-turkerview-ratings-hourly" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Pay</div>
+                                        <div id="review-turkerview-ratings-pay" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Fast</div>
+                                        <div id="review-turkerview-ratings-fast" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Comm</div>
+                                        <div id="review-turkerview-ratings-comm" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Rejections</div>
+                                        <div id="review-turkerview-rejections" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">ToS</div>
+                                        <div id="review-turkerview-tos" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Blocks</div>
+                                        <div id="review-turkerview-blocks" class="col"></div>
+                                    </div>
+                                </div>
+                                <div id="review-turkerview-no-reviews">
+                                    No Reviews
+                                </div>
+                            </div>
+                            <div id="review-turkopticon" class="col-3">
+                                <h5>
+                                    <a id="review-turkopticon-link" class="text-primary font-weight-bold" target="_blank">Turkopticon</a>
+                                </h5>
+                                <div id="review-turkopticon-review">
+                                    <div class="row">
+                                        <div class="col">Pay</div>
+                                        <div id="review-turkopticon-attrs-pay" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Fast</div>
+                                        <div id="review-turkopticon-attrs-fast" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Comm</div>
+                                        <div id="review-turkopticon-attrs-comm" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Fair</div>
+                                        <div id="review-turkopticon-attrs-fair" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Reviews</div>
+                                        <div id="review-turkopticon-reviews" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">ToS</div>
+                                        <div id="review-turkopticon-tos_flags" class="col"></div>
+                                    </div>
+                                </div>
+                                <div id="review-turkopticon-no-reviews">
+                                    No Reviews
+                                </div>
+                            </div>
+                            <div id="review-turkopticon2" class="col-6">
+                                <h5>
+                                    <a id="review-turkopticon2-link" class="text-primary font-weight-bold" target="_blank">Turkopticon 2</a>
+                                    <small>(Recent/All)</small>
+                                </h5>
+                                <div id="review-turkopticon2-review">
+                                    <div class="row">
+                                        <div class="col">Hourly</div>
+                                        <div id="review-turkopticon2-recent-reward" class="col"></div>
+                                        <div id="review-turkopticon2-all-reward" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Pending</div>
+                                        <div id="review-turkopticon2-recent-pending" class="col"></div>
+                                        <div id="review-turkopticon2-all-pending" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Response</div>
+                                        <div id="review-turkopticon2-recent-comm" class="col"></div>
+                                        <div id="review-turkopticon2-all-comm" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Recommend</div>
+                                        <div id="review-turkopticon2-recent-recommend" class="col"></div>
+                                        <div id="review-turkopticon2-all-recommend" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Rejected</div>
+                                        <div id="review-turkopticon2-recent-rejected" class="col"></div>
+                                        <div id="review-turkopticon2-all-rejected" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">ToS</div>
+                                        <div id="review-turkopticon2-recent-tos" class="col"></div>
+                                        <div id="review-turkopticon2-all-tos" class="col"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Broken</div>
+                                        <div id="review-turkopticon2-recent-broken" class="col"></div>
+                                        <div id="review-turkopticon2-all-broken" class="col"></div>
+                                    </div>
+                                </div>
+                                <div id="review-turkopticon2-no-reviews">
+                                    No Reviews
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="/hit-finder/hit-finder.js"></script>
+
+</html>
