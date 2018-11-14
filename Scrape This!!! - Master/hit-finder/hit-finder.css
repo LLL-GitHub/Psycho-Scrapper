@@ -1,0 +1,221 @@
+.table-extra-condensed {
+    line-height: 1;
+}
+
+.table-extra-condensed th {
+    padding: 1px 1px !important;
+}
+
+.table-extra-condensed td {
+    padding: 1px 1px !important;
+}
+
+.included td {
+    border: 2px solid #009900 !important;
+}
+
+.has-test td {
+/* This will be used to highlight the masters "Y" or "N" if there is a test available. */
+    color: lime;
+}
+.test td {
+    color: yellow !important;
+}
+.nonqualled td {
+ /* Highlights text in the row red if you are not qualified to do it. */
+  color: red;
+}
+
+.high-roller td {
+    color: green;
+}
+.autoPandaIncluded td {
+    color:purple;
+}
+
+.table-success *:not(i):not(svg):not(path):not(a):not(.btn),
+.table-warning *:not(i):not(svg):not(path):not(a):not(.btn),
+.table-danger *:not(i):not(svg):not(path):not(a):not(.btn),
+.table-default *:not(i):not(svg):not(path):not(a):not(.btn) {
+    color: black !important;
+}
+
+.table-success .btn,
+.table-warning .btn,
+.table-danger .btn,
+.table-default .btn {
+    border-color: black !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+}
+
+.table-success a,
+.table-warning a,
+.table-danger a,
+.table-default a {
+    color: #0000EE !important;
+}
+
+.table-success a:active,
+.table-warning a:active,
+.table-danger a:active,
+.table-default a:active {
+    color: #FF0000 !important;
+    text-decoration: underline !important;
+}
+
+.table-success a:visited,
+.table-warning a:visited,
+.table-danger a:visited,
+.table-default a:visited {
+    color: #551A8B !important;
+}
+
+.table-default td {
+    background-color: buttonface !important;
+}
+
+.range-wrapper {
+    border: solid 1px #ced4da;
+    padding: 3px 9px;
+    border-radius: .25rem;
+}
+.range-wrapper {
+    border: 1px solid #ced4da;
+    border-radius: .25em;
+    padding: .2em .5em;
+}
+ .range-wrapper input[type='range'] {
+    width: 100%;
+}
+ .range-wrapper .lable {
+    font-size: .6em;
+}
+ .range-wrapper .align-right {
+    float: right;
+}
+#slider22 .slider-selection {
+	background: #81bfde;
+}
+
+#slider22 .slider-rangeHighlight {
+	background: #f70616;
+}
+
+#slider22 .slider-rangeHighlight.category1 {
+    background: #FF9900;
+}
+
+#slider22 .slider-rangeHighlight.category2 {
+    background: #99CC00;
+}
+
+.flex-item {
+    justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+}
+.navbar.navbar-inverse {
+    background-color: #3e968a;
+  }
+.navbar.navbar-inverse .navbar-nav > li > a {
+    background-color: #3e968a;
+    color: #1d2c43;
+  }
+.navbar.navbar-inverse .navbar-nav > li > a:hover {
+    color: #42cbad;
+  }
+.navbar.navbar-inverse .navbar-nav > .active,
+.navbar.navbar-inverse .navbar-nav > .active > a,
+.navbar.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #486972;
+    color: #eef9fa;
+  }
+.navbar.navbar-inverse .dropdown-menu {
+    background-color: #3e968a;
+  }
+.navbar.navbar-inverse .dropdown-menu > li > a {
+    color: #eef9fa;
+  }
+.navbar.navbar-inverse .dropdown-menu > li > a:hover,
+.navbar.navbar-inverse .dropdown-menu>li>a:focus {
+    background-color: #42cbad;
+    color: #1d2c43;
+  }
+.navbar.navbar-inverse .navbar-nav li.dropdown.open > .dropdown-toggle,
+.navbar.navbar-inverse .navbar-nav li.dropdown.active > .dropdown-toggle,
+.navbar.navbar-inverse .navbar-nav li.dropdown.open.active > .dropdown-toggle {
+    background: #486972;
+    color: #eef9fa;
+  }
+.navbar.navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
+    border-bottom-color: #486972;
+  }
+.navbar.navbar-inverse .navbar-brand {
+    color: #1d2c43;
+  }
+  
+
+/* Create three equal columns that float next to each other */
+.column {
+    float: left;
+   width: 33%;
+    padding: 10px;
+    border: solid;
+    background-color: black !important;
+    height: 320px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Create a smaller column that floats next to the others */
+.column-b {
+    float: left;
+   width: 23%;
+    padding: 10px;
+    border: solid;
+    background-color: black !important;
+    height: 320px; /* Should be removed. Only for demonstration */
+  }
+
+   /* Create a smaller column that floats next to the others */
+.column-c {
+    float: left;
+   width: 10%;
+    padding: 10px;
+    border: solid;
+    background-color: black !important;
+    height: 320px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column {
+    width: 100%;
+    }
+  }
+
+/*
+#myDIV {
+      width: 100%;
+      padding: 50px 0;
+      text-align: center;
+      background-color: lightblue;
+      margin-top: 20px;
+  }
+  */
+/* Toggle for the hidden DIV under the NAVBAR */
+
+.hidden>div {
+	display:none;
+}
+
+.visible>div {
+	display:block;
+}
+/* Slider CSS */
+
