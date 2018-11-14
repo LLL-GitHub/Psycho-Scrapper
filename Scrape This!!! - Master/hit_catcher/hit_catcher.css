@@ -1,0 +1,137 @@
+
+.panel, .panel-top {
+  margin-bottom: 5px !important;
+}
+
+
+.card-header {
+  padding: 0px 3px;
+}
+
+#hits .card-header {
+  line-height: 1.1;
+}
+
+.card-block {
+  padding: .25rem;
+}
+
+.card {
+  margin-top: 2px;
+}
+
+.card-hit {
+  border: 0 !important;
+}
+
+.btn-group-xxs > .btn,
+.btn-xxs {
+  padding: 1px 2px !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  border-radius: 3px !important;
+}
+
+.glyphicon-question-sign {
+  font-size: 10px;
+  padding-top: 2px;
+}
+
+.glyphicon-cog {
+  cursor: pointer;
+  font-size: 10px;
+  padding-top: 2px;
+}
+
+.glyphicon-remove {
+  cursor: pointer;
+  font-size: 10px;
+  padding-top: 2px;
+ /* padding-right: 2px;*/
+}
+
+
+.input-group-sm {
+  width: 100%;
+  margin: 3px;
+}
+
+
+
+select {
+  width: 100%;
+}
+
+
+.input-group-xs {
+  width: 120px;
+}
+
+.input-group-xs .input-group-addon {
+  padding: 1px 2px !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  border-radius: 3px !important;
+  height: 20px;
+}
+
+.input-group-xs .form-control {
+  height: 20px;
+  padding: 0;
+}
+
+.selected {
+  border: 2px solid yellow !important;
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .col-sm-4 {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+  
+  .col-sm-4:nth-child(3n + 1) {
+    padding-left: 15px;
+  }
+  
+  .col-sm-4:nth-child(3n) {
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-3 {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+  
+  .col-md-3:nth-child(4n + 1) {
+    padding-left: 15px;
+  }
+  
+  .col-md-3:nth-child(4n) {
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-2 {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+  
+  .col-lg-2:nth-child(6n+ 1) {
+    padding-left: 15px;
+  }
+  
+  .col-lg-2:nth-child(6n) {
+    padding-right: 15px;
+  }
+}
+
+.modal-title {
+  font-size: 1em;
+  font-weight: normal;
+  float: left;
+}
